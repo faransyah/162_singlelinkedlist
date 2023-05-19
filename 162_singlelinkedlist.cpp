@@ -33,7 +33,17 @@ void addNode() {
 
 		while ((current != NULL) && (nim >= current->noMhs))
 		{
+			if (nim == current->noMhs) {
+				cout << "NIM suda ada" << endl;
+				return;
+			}
 
+			3previous = current;
+			current = current->next;
 		}
+
+		nodeBaru->next = current;
+		previous->next = nodebaru;
+
 	}
 }
