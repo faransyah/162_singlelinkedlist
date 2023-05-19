@@ -79,14 +79,23 @@ bool deleteNode(int nim) {
 		START = current->next;
 	return true;
 }
-
 bool listEmpty() {
+	if (START == NULL)
+		return true;
+	else
+		return false;
+
+}
+
+void traverse() {
 	if (listEmpty()) {
 		cout << "List Kosong" << endl;
 		system("Pause");
 		system("cls");
 		return;
 	}
+
+
 	else
 	{
 		Node* currentNode = START;
@@ -155,7 +164,7 @@ int main() {
 				int nim;
 				cout << "Masukkan NIM: ";
 				cin >> nim;;
-				if (deleteNode(nimm)) {
+				if (deleteNode(nim)) {
 					wcout << "nim: " << nim << " berhasil dihapus" << endl;
 					system("pause");
 					system("cls");
@@ -166,13 +175,19 @@ int main() {
 				traverse();
 				break;
 			case 4:
-				searchData() :
+				searchData();
 					break;
-
-				
-				
+			case 5: 
+				break;
+			default:
+				cout << "Pilihan tidak ada" << endl;
+				break;	
 			}
 		}
-	}
+		catch (exception e)
+		{
+			cout << "Terjadi Kesalahan" << endl;
+		}
+	} while (pilihan != 5);
 }
 
